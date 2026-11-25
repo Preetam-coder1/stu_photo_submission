@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>IIUCPS | Photo Submission</title>
+  
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/iiucps-logo.png" alt="IIUC Photography Society logo">
+      <div class="brand-copy">
+        <strong>IIUCPS</strong>
+        <span>IIUC PHOTOGRAPHY SOCIETY</span>
+      </div>
+    </div>
+    <img
+    src="assets/SeeTheUnseen (1).png"
+    alt="See The Unseen Logo"
+    class="top-logo"
+>
+  </header>
+
+  <main>
+    <div class="eyebrow">IIUC Photography Society Presents</div>
+    <h1>PHOTO SUBMISSION</h1>
+    <p class="intro">Share your perspective with us. Select 2 to 5 photographs and submit your entries.</p>
+
+    <section class="card">
+      <label class="upload-area" id="dropArea" for="photoInput">
+        <div class="upload-icon">+</div>
+        <strong>Choose your photographs</strong>
+        <small>Click to browse or drag & drop your images here<br>Minimum 2 photos · Maximum 5 photos</small>
+      </label>
+      <input id="photoInput" type="file" accept="image/*" multiple>
+      <div class="file-info">
+        <span id="countText">No photos selected</span>
+        <span>JPG · PNG · WEBP</span>
+      </div>
+      <div id="previewGrid"></div>
+
+      <div class="actions">
+        <button id="submitBtn" type="button">SUBMIT PHOTOS</button>
+        <button id="clearBtn" type="button">CLEAR</button>
+      </div>
+      <p class="note">Please make sure your selected photographs are correct before submitting.</p>
+    </section>
+  </main>
+  <footer>© IIUC PHOTOGRAPHY SOCIETY · SEE THE UNSEEN</footer>
+
+  <div id="status" role="dialog" aria-modal="true" aria-labelledby="messageTitle" aria-describedby="messageText">
+    <div class="message-box">
+      <div class="message-icon" id="messageIcon">✓</div>
+      <h2 class="message-title" id="messageTitle">Submission Successful!</h2>
+      <p class="message-text" id="messageText"></p>
+      <button class="message-close" id="messageClose" type="button">OKAY</button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
